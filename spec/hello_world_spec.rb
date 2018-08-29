@@ -14,5 +14,6 @@ class HelloWorldTest < Test::Unit::TestCase
   def test_response_is_okay
     get '/'
     assert last_response.ok?
+    assert_equal 'Hello world', last_response.body
   end
 end
